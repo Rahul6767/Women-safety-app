@@ -22,21 +22,27 @@ trusted contacts, and quick sharing options.
 
 ## Project Structure
 
-Women-safety-app/
-├── app/
-│ ├── build.gradle
-│ ├── google-services.json
-│ └── src/main/
-│ ├── AndroidManifest.xml
-│ ├── java/com/example/kalya/rahul/
-│ │ ├── MainActivity.java
-│ │ ├── MyService.java
-│ │ ├── NewsFeed.java
-│ │ ├── Settings.java
-│ │ └── Map.java
-│ └── res/ (layouts, menus, values)
-├── build.gradle
-└── settings.gradle
+**app/build.gradle** – Module-level build script setting SDK levels, application ID, Firebase dependencies, and applying the Google services plugin
+
+**app/google-services.json** – Firebase configuration with project identifiers, package names, OAuth clients, and API keys for the app
+
+**app/src/main/AndroidManifest.xml** – Defines package metadata, requests Internet and location permissions, and registers MainActivity, Settings, NewsFeed, Map, and the background MyService
+
+**MainActivity.java** – Entry activity that launches MyService via a button, requests runtime location permissions, and provides navigation drawer actions for news, settings, and sharing content
+
+**MyService.java** – Background service obtaining GPS coordinates, pushing them to Firebase, and scheduling updates every 20 seconds while managing location listeners
+
+**NewsFeed.java** – Activity hosting a WebView that loads Times of India headlines and handles in‑app back navigation
+
+**Map.java** – Simple placeholder activity inflating the activity_map layout without additional logic
+
+**res/layout/activity_main.xml** – Defines the main screen using a DrawerLayout with an included app bar and navigation drawer menu
+
+**res/layout/activity_settings.xml** – Layout for entering a friend’s phone number, adding it via a button, and displaying stored numbers in a list view
+
+**res/menu/activity_main_drawer.xml** – Navigation drawer menu listing Home, NewsFeed, Settings, and Share options
+
+**res/values/strings.xml** – Centralized string resources for the app name, navigation drawer text, and other UI labels
 
 
 ## Dependencies
