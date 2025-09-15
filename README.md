@@ -51,3 +51,11 @@ trusted contacts, and quick sharing options.
 - Firebase Authentication
 - Firebase Realtime Database
 
+## Contribution
+
+**Kalyan Sai**	
+Designed and built the UI: navigation drawer, layouts, settings screen, and news feed WebView. Implemented the map screen and wired up UI to backend services.
+
+**Rahul Payeli**	
+Developed backend services: location tracking and Firebase Realtime Database integration, background service for periodic updates, and configuration of Google/Firebase services and permissions.
+
